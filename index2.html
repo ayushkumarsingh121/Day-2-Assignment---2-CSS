@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Table</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      .styled-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 18px;
+        text-align: left;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .styled-table th,
+      .styled-table td {
+        padding: 12px 15px;
+      }
+
+      .styled-table thead tr {
+        background-color: green;
+        text-align: left;
+        font-weight: bold;
+      }
+
+      .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+      }
+
+      .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+      }
+
+      .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+      }
+
+      .styled-table tfoot {
+        background-color: #e0e0e0;
+      }
+
+      .styled-table tfoot tr td {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Price per Unit</th>
+          <th>Description</th>
+          <th>Total Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Product 1</td>
+          <td>2</td>
+          <td>$10</td>
+          <td>This is product 1</td>
+          <td>$20</td>
+        </tr>
+        <tr>
+          <td>Product 2</td>
+          <td>3</td>
+          <td>$20</td>
+          <td>This is product 2</td>
+          <td>$60</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4"><strong>Sum</strong></td>
+          <td><strong>$80</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
